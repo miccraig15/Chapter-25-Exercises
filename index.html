@@ -6,6 +6,7 @@
     <style>
       label { display: block; margin-bottom: 7px;}
     </style>
+    <script src = "script.js"></script>
   </head>
   <body>
     <h1>Rocket Simulation</h1>
@@ -21,13 +22,13 @@
                 <option value="4">Terrier</option>
             </select>
         </label>
-        <label>Number of Rocket Boosters <input type="number" name="boosterCount"/></label>
+        <label>Number of Rocket Boosters <input type="number" name="boosterCount" min="1" max="9"/></label>
         Wind Rating:
         <label>No Wind<input type="radio" name="windRating" value="0"/></label>
         <label>Mild<input type="radio" name="windRating" value="10"/></label>
         <label>Strong<input type="radio" name="windRating" value="20"/></label>
         <label>Use production grade servers<input type ="checkbox" name="productionServers"/></label>
-        <button>Run Simulation</button>
+        <button id="simulate">Run Simulation</button>
     </form>
   </body>
   
