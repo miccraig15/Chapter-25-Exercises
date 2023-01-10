@@ -1,15 +1,16 @@
 window.addEventListener("load", function(){
     let form = document.querySelector("form");
-    form.addEventListener("simulate", function(event) {
-        let testName = document.getElementByID("testName");
-        let testDate = document.getElementByID("flightDate");
-        let rocketType = document.getElementByID("rocketType");
-        let boosterCount = document.getElementByID("boosterCount");
-        let windRating = document.getElementByID("windRating");
-        let productionServers = document.getElementByID("productionServers");
-        if (testName.value === "" || testDate.value === "" || boosterCount.value === "" || windRating.value === "") {
+    form.addEventListener("submit", function(event) {
+                let testName = document.getElementById("testName");
+        let testDate = document.getElementById("flightDate");
+        let rocketType = document.getElementById("rocketType");
+        let boosterCount = document.getElementById("boosterCount");
+        let windRating = document.getElementById("windRating");
+        let productionServers = document.getElementById("productionServers");
+        if (testName.value === "" || testDate.value === "" || boosterCount.value === "") {
             event.preventDefault();
-            window.alert("All fields are required!")
+            window.alert("All fields are required!");
+            
         }
     });
 });
